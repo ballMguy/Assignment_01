@@ -3,12 +3,33 @@
  */
 package q7;
 
+import java.util.Scanner;
+
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        Scanner scanIn = new Scanner(System.in);
+        System.out.print("Enter a Fibonanci number: ");
+        int n = scanIn.nextInt();
+        scanIn.close();
+        System.out.println("Calculating");
+        int a = 0, b = 1;
+        if (n >= 0) {
+            System.out.println("f0 = " + a);
+        }
+        if (n >= 1) {
+            System.out.println("f1 = " + b);
+        }
+        for (int i = 2; i <= n; i++) {
+            int c = a + b;
+            a = b;
+            b = c;
+            System.out.println("f" + i + " = " + b);
+        }
+        System.out.println("Value of Fibonacci is " + b);
     }
+
 }
