@@ -10,15 +10,15 @@ public class App {
     }
 
     public static void main(String[] args) {
-        Scanner scanIn = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Input your salary : ");
-        double a = scanIn.nextDouble();
-        scanIn.close();
-        if(a <= 15000) {
-            a = a * 0.05;
+        double x = sc.nextDouble();
+        sc.close();
+        if(x <= 15000) {
+            x = x * 0.05;
         } else {
-            a = 15000 * 0.05;
+            x = 15000 * 0.05;
         }
-        System.out.print("Your Welfare is "+ a + " Baht");
+        System.out.print("Your Welfare is "+ x + " Baht");
     }
 }
