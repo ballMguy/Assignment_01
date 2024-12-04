@@ -10,12 +10,12 @@ public class App {
     }
 
     public static void main(String[] args) {
-        Scanner scanIn = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.print("Input P : ");
-        int P = scanIn.nextInt();
+        int P = sc.nextInt();
         System.out.print("Input Q : ");
-        int Q = scanIn.nextInt();
-        scanIn.close();
+        int Q = sc.nextInt();
+        sc.close();
         int PQ = P ^ Q;
         if (PQ > 1 || PQ < 0) {
             System.out.println("Error");
